@@ -1,0 +1,110 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffb6c1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.container .btn {
+  display: flex;
+  gap: 25px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 10px 25px;
+  border-radius: 66px;
+  box-shadow: 0.5rem 1rem 3rem rgba(0,0,0,0.3);
+}
+
+/* Hearts container */
+#hearts-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Heart styling and animation */
+.heart {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+h1, h2, p {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Add Google Fonts import */
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+/* Change h1, h2, p font and style */
+h1, h2, p {
+  font-family: 'Times New Roman', Times, serif; /* classic Times font */
+  font-style: italic;   /* italic */
+  font-weight: bold;    /* bold */
+  color: #111;
+  line-height: 1.4;
+}
+
+/* Buttons bigger and bold */
+.btn a {
+  text-decoration: none;
+  color: #111;
+  background: #fff;
+  padding: 18px 40px;   /* bigger padding */
+  border-radius: 66px;
+  font-weight: bold;     /* bold text */
+  font-size: 1.3rem;     /* bigger text */
+  font-style: normal;    /* buttons normal, not italic */
+  box-shadow: 0.5rem 1rem 3rem rgba(0,0,0,0.3);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn a:hover {
+  transform: scale(1.1);
+  background: #ffe0e6;
+}
